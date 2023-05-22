@@ -21,6 +21,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'SessionAdmin' => \App\Filters\SessionAdmin::class
     ];
 
     /**
@@ -60,5 +61,37 @@ class Filters extends BaseConfig
      * Example:
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
-    public array $filters = [];
+    public array $filters = [
+        "SessionAdmin" => [
+            "before" => [
+                "/start",
+                "/profile",
+                "/add_user",
+                "/add_form_user",
+                "/update_profile",
+                "/add_course",
+                "/add_course",
+                "/add_form_course",
+                "/add_form_course",
+                "/courses",
+                "/course_detail",
+                "/add_video",
+                "/ver_video"
+                
+            ]
+        ]
+    ];
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
