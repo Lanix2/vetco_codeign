@@ -1,0 +1,798 @@
+ERROR - 2023-05-21 20:23:09 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'vetco_codeign', 3306, '', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2023-05-21 20:28:09 --> mysqli_sql_exception: Can't create table `vetco_codeign`.`users` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-202054_Users.php(42): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\Users->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-05-21 20:34:06 --> mysqli_sql_exception: Can't create table `vetco_codeign`.`users` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-202054_Users.php(43): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\Users->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 20:35:44 --> mysqli_sql_exception: Can't create table `vetco_codeign`.`users` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-202054_Users.php(43): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\Users->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 20:37:11 --> mysqli_sql_exception: Can't create table `vetco_codeign`.`users` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-202054_Users.php(44): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\Users->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 20:50:02 --> mysqli_sql_exception: Can't create table `vetco_codeign`.`users` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-202054_Users.php(45): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\Users->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 21:12:32 --> mysqli_sql_exception: Can't create table `vetco_codeign`.`users` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-202054_Users.php(46): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\Users->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 21:13:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`phone` VARCHAR(30) UNSIGNED NOT NULL,
+	`created_at` TIME...' at line 7 in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-205514_Person.php(51): CodeIgniter\Database\Forge->createTable('person')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\Person->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 21:14:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`phone` INT(30) NOT NULL,
+	`created_at` TIMESTAMP NOT NUL...' at line 7 in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-205514_Person.php(50): CodeIgniter\Database\Forge->createTable('person')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\Person->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 21:14:30 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-210011_StudentCourse.php(33): CodeIgniter\Database\Forge->createTable('student_course')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\StudentCourse->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 21:16:43 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-210011_StudentCourse.php(33): CodeIgniter\Database\Forge->createTable('student_course')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\StudentCourse->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 21:17:48 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-210011_StudentCourse.php(33): CodeIgniter\Database\Forge->createTable('student_course')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\StudentCourse->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 21:18:02 --> mysqli_sql_exception: Can't create table `vetco_codeign`.`student_course` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-210011_StudentCourse.php(33): CodeIgniter\Database\Forge->createTable('student_course')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\StudentCourse->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 21:19:14 --> mysqli_sql_exception: Can't create table `vetco_codeign`.`student_course` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `s...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-210011_StudentCourse.php(34): CodeIgniter\Database\Forge->createTable('student_course')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\StudentCourse->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2023-05-21 21:20:17 --> mysqli_sql_exception: Can't create table `vetco_codeign`.`file` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `f...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `f...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `f...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `f...')
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Migrations\2023-05-21-210641_File.php(41): CodeIgniter\Database\Forge->createTable('file')
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(877): App\Database\Migrations\File->up()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\BaseCommand.php(114): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#14 {main}
+INFO - 2023-05-21 21:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 21:35:40 --> Class 'App\Controllers\Users' not found
+in APPPATH\Controllers\Home.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 21:36:45 --> Class 'App\Models\Users' not found
+in APPPATH\Controllers\Home.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 21:36:59 --> Class 'App\Models\Users' not found
+in APPPATH\Controllers\Home.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 21:37:46 --> Class 'App\Models\Users' not found
+in APPPATH\Controllers\Home.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 21:38:07 --> Undefined variable: Usuario
+in APPPATH\Controllers\Home.php on line 30.
+ 1 APPPATH\Controllers\Home.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: Usuario', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Controllers\\Home.php', 30, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 21:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:39:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-21 21:43:33 --> mysqli_sql_exception: Table 'vetco_codeign.user' doesn't exist in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Seeds\Users.php(24): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Seeder.php(146): App\Database\Seeds\Users->run()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2023-05-21 21:43:47 --> mysqli_sql_exception: Unknown column 'type_user' in 'field list' in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Seeds\Users.php(24): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Seeder.php(146): App\Database\Seeds\Users->run()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2023-05-21 21:43:59 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`vetco_codeign`.`users`, CONSTRAINT `users_id_person_foreign` FOREIGN KEY (`id_person`) REFERENCES `person` (`id_person`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Database\Seeds\Users.php(24): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\Seeder.php(146): App\Database\Seeds\Users->run()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+CRITICAL - 2023-05-21 21:46:08 --> Undefined index: type_user
+in APPPATH\Controllers\Home.php on line 38.
+ 1 APPPATH\Controllers\Home.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: type_user', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Controllers\\Home.php', 38, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 21:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 21:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 22:02:53 --> Class 'App\Controllers\Courses' not found
+in APPPATH\Controllers\Home.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:03:05 --> Too few arguments to function App\Models\Courses::getCourse(), 0 passed in D:\xamppp\htdocs\proyectos\vetco_codeign\app\Controllers\Home.php on line 23 and exactly 1 expected
+in APPPATH\Models\Courses.php on line 5.
+ 1 APPPATH\Controllers\Home.php(23): App\Models\Courses->getCourse()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-21 22:03:29 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3 in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Models\Courses.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Controllers\Home.php(23): App\Models\Courses->getCourse()
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->add_user()
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-21 22:03:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `Course`
+WHERE  IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `Course`
+WHERE  IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `Course`
+WHERE  IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Course`
+WHERE  IS NULL', [], false)
+ 5 APPPATH\Models\Courses.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(23): App\Models\Courses->getCourse()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:03:37 --> Undefined variable: dataCourse
+in APPPATH\Views\add_user.php on line 3.
+ 1 APPPATH\Views\add_user.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataCourse', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php', 3, [])
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('add_user', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('add_user', [])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:04:44 --> Undefined variable: dataCourse
+in APPPATH\Views\add_user.php on line 3.
+ 1 APPPATH\Views\add_user.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataCourse', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php', 3, [])
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('add_user', [], true)
+ 5 APPPATH\Controllers\Home.php(27): view('add_user', [])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:05:15 --> Undefined variable: dataCourse
+in APPPATH\Views\add_user.php on line 3.
+ 1 APPPATH\Views\add_user.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataCourse', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php', 3, [])
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('add_user', [], true)
+ 5 APPPATH\Controllers\Home.php(27): view('add_user', [])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:05:25 --> Undefined variable: dataCourse
+in APPPATH\Views\add_user.php on line 3.
+ 1 APPPATH\Views\add_user.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataCourse', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php', 3, [])
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('add_user', [], true)
+ 5 APPPATH\Controllers\Home.php(27): view('add_user', [])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:06:01 --> Undefined variable: dataCourse
+in APPPATH\Views\add_user.php on line 3.
+ 1 APPPATH\Views\add_user.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataCourse', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php', 3, [])
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('add_user', [], true)
+ 5 APPPATH\Controllers\Home.php(27): view('add_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:06:42 --> Undefined variable: dataCourse
+in APPPATH\Views\add_user.php on line 3.
+ 1 APPPATH\Views\add_user.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataCourse', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php', 3, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('add_user', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('add_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 22:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 22:23:52 --> Undefined index: password
+in APPPATH\Controllers\Home.php on line 45.
+ 1 APPPATH\Controllers\Home.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: password', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Controllers\\Home.php', 45, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_form_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 22:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 22:24:28 --> Undefined index: type_user
+in APPPATH\Controllers\Home.php on line 46.
+ 1 APPPATH\Controllers\Home.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: type_user', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Controllers\\Home.php', 46, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_form_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:26:58 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Home.php(24): CodeIgniter\Model->__call('getTypes', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:27:58 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Home.php(24): CodeIgniter\Model->__call('getTypesUsers', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:28:46 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Home.php(24): CodeIgniter\Model->__call('getTypesUsers', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:28:58 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Home.php(24): CodeIgniter\Model->__call('getTypesUsers', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:29:25 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Home.php(25): CodeIgniter\Model->__call('getTypesUsers', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:30:31 --> Undefined variable: dataTypes
+in APPPATH\Controllers\Home.php on line 29.
+ 1 APPPATH\Controllers\Home.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataTypes', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Controllers\\Home.php', 29, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:31:14 --> Undefined variable: dataTypes
+in APPPATH\Controllers\Home.php on line 29.
+ 1 APPPATH\Controllers\Home.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dataTypes', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Controllers\\Home.php', 29, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:32:05 --> Declaration of App\Models\Users::insert($person, $user) should be compatible with CodeIgniter\Model::insert($data = NULL, bool $returnID = true)
+in APPPATH\Models\Users.php on line 23.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Declaration of App\\Models\\Users::insert($person, $user) should be compatible with CodeIgniter\\Model::insert($data = NULL, bool $returnID = true)', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Models\\Users.php', 23, [...])
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Models\\Users.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Users')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Users')
+ 6 APPPATH\Controllers\Home.php(22): spl_autoload_call('App\\Models\\Users')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 22:32:51 --> Declaration of App\Models\Users::insert($data) should be compatible with CodeIgniter\Model::insert($data = NULL, bool $returnID = true)
+in APPPATH\Models\Users.php on line 23.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Declaration of App\\Models\\Users::insert($data) should be compatible with CodeIgniter\\Model::insert($data = NULL, bool $returnID = true)', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Models\\Users.php', 23, [...])
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Models\\Users.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Users')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Users')
+ 6 APPPATH\Controllers\Home.php(22): spl_autoload_call('App\\Models\\Users')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 22:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 22:34:26 --> Undefined variable: data
+in APPPATH\Views\add_user.php on line 3.
+ 1 APPPATH\Views\add_user.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php', 3, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Views\\add_user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('add_user', [], true)
+ 5 APPPATH\Controllers\Home.php(34): view('add_user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_user()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 22:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 22:45:16 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_id()
+in APPPATH\Models\Users.php on line 29.
+ 1 APPPATH\Controllers\Home.php(67): App\Models\Users->insert_user([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_form_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 22:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 22:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 22:59:56 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::where()
+in APPPATH\Models\Users.php on line 8.
+ 1 APPPATH\Controllers\Home.php(38): App\Models\Users->getUsers([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-21 23:04:04 --> mysqli_sql_exception: Table 'vetco_codeign.user' doesn't exist in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Models\Users.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Controllers\Home.php(38): App\Models\Users->getUsers(Array)
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->login()
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-21 23:04:04 --> Table 'vetco_codeign.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `user`
+JOIN `person` ON `id_person` = `id_person`
+WHERE `user` = \'cali@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `person` ON `id_person` = `id_person`
+WHERE `user` = \'cali@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `person` ON `id_person` = `id_person`
+WHERE `user` = \'cali@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `person` ON `id_person` = `id_person`
+WHERE `user` = :user:', [...], false)
+ 5 APPPATH\Models\Users.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(38): App\Models\Users->getUsers([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-21 23:04:11 --> mysqli_sql_exception: Column 'id_person' in on clause is ambiguous in D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Models\Users.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xamppp\htdocs\proyectos\vetco_codeign\app\Controllers\Home.php(38): App\Models\Users->getUsers(Array)
+#6 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->login()
+#7 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xamppp\htdocs\proyectos\vetco_codeign\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xamppp\htdocs\proyectos\vetco_codeign\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-21 23:04:11 --> Column 'id_person' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `users`
+JOIN `person` ON `id_person` = `id_person`
+WHERE `user` = \'cali@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+JOIN `person` ON `id_person` = `id_person`
+WHERE `user` = \'cali@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+JOIN `person` ON `id_person` = `id_person`
+WHERE `user` = \'cali@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+JOIN `person` ON `id_person` = `id_person`
+WHERE `user` = :user:', [...], false)
+ 5 APPPATH\Models\Users.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(38): App\Models\Users->getUsers([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->login()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 23:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 23:11:55 --> Array to string conversion
+in APPPATH\Controllers\Home.php on line 27.
+ 1 APPPATH\Controllers\Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Controllers\\Home.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->profile()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 23:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:17:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 23:27:16 --> Undefined variable: Nombres
+in APPPATH\Models\Users.php on line 48.
+ 1 APPPATH\Models\Users.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: Nombres', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Models\\Users.php', 48, [...])
+ 2 APPPATH\Controllers\Home.php(167): App\Models\Users->update_profile([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->update_profile([...])
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 23:27:51 --> Undefined variable: Nombres
+in APPPATH\Models\Users.php on line 55.
+ 1 APPPATH\Models\Users.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: Nombres', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Models\\Users.php', 55, [...])
+ 2 APPPATH\Controllers\Home.php(167): App\Models\Users->update_profile([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->update_profile([...])
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 23:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 23:50:28 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 191.
+ 1 APPPATH\Controllers\Home.php(191): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Controllers\\Home.php', 191, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_form_course()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 23:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-21 23:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 23:53:23 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 191.
+ 1 APPPATH\Controllers\Home.php(191): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Home::$load', 'D:\\xamppp\\htdocs\\proyectos\\vetco_codeign\\app\\Controllers\\Home.php', 191, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_form_course()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-21 23:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-21 23:59:51 --> Call to undefined function App\Controllers\upload()
+in APPPATH\Controllers\Home.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->add_form_course()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
