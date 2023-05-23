@@ -1,6 +1,6 @@
 <?php
 
-var_dump(session("type"));
+//var_dump(session("type"));
 ?>
 <!DOCTYPE html>
 <html lang="en">

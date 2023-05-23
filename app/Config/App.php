@@ -17,7 +17,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://localhost/proyectos/vetco_codeign/public/';
+    public string $baseURL = 'http://localhost/proyectos/vetco_codeigniter/public/';
    // public string $testURL = 'D:\xamppp\htdocs\proyectos\vetco_codeign\uploads'
 
     /**
